@@ -19,7 +19,7 @@ Each pixel casts a camera ray that recursively bounces off whatever it hits (sph
 - **Recursive ray tracing with reflections** - each ray traces up to 3 bounces off spheres and the ground plane, with each bounce's contribution attenuated by a diffusion-rate falloff so the reflection contribution decays realistically rather than staying full-strength indefinitely.
 - **Live rigid-body physics** - spheres have elasticity and move/collide via a physics update step each frame, with a UI toggle and time-multiplier slider to speed up, slow down, or pause the simulation.
 - **Full interactive scene editor** - add spheres on the fly; adjust each sphere's color, position, radius, and elasticity with live sliders; adjust background color and light direction while the scene renders.
-- **Free camera movement** — WASD/QE axis movement with an adjustable speed, plus a one-click "Origin" reset.
+- **Free camera movement** - WASD/QE axis movement with an adjustable speed, plus a one-click "Origin" reset.
 - **Scene persistence with auto-save** - save/save-as/load named scene files, plus automatic background auto-saving (time- and action-count-based) so in-progress scenes aren't lost.
 - **Screenshot export** - save the current viewport render, or a fixed high-quality 4096×2160 render, to a `.ppm` image file.
 - **Multithreaded rendering** - parallelized per-pixel using C++17 execution policies (`std::execution::par`), togglable via a compile-time flag.
@@ -67,3 +67,6 @@ This project depends on Walnut, which requires Vulkan. Follow [Walnut's setup in
 
 ## Notes
 - Screenshot export writes `.ppm` files, which aren't natively viewable in most image viewers or browsers — convert to PNG (e.g. with ImageMagick: `magick Screenshot.ppm Screenshot.png`) before using one as the high-resolution demo image above.
+- Ability to add support for variable ray bounces (changed with a Dear ImGui slider) is planned
+- Support for material-based rendering is planned
+- Support for Emissive objects is planned
