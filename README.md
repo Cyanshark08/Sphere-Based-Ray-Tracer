@@ -8,11 +8,11 @@ An interactive, recursive ray tracer in C++ built on [Walnut](https://github.com
 
 https://github.com/user-attachments/assets/d5315392-4131-4fc8-b680-d02043bdf1b2
 
-*Click to watch a demo - replace with a real recording of the interactive viewport (camera movement, sphere physics, live reflections).*
+*Click to watch a demo - a real recording of the interactive viewport (camera movement, sphere physics, live reflections).*
 
 ## Overview
 
-Each pixel casts a camera ray that recursively bounces off whatever it hits — spheres or the ground plane — up to a fixed number of bounces, attenuating color contribution at each additional bounce so reflections fade out realistically rather than looping forever. On top of the renderer, spheres in the scene are live rigid bodies: they have position, radius, color, and elasticity, and a physics step updates their motion every frame (toggleable, with an adjustable time multiplier), so you can watch reflective spheres bounce and collide while the reflections update in real time.
+Each pixel casts a camera ray that recursively bounces off whatever it hits (spheres or the ground plane) up to a fixed number of bounces, attenuating color contribution at each additional bounce so reflections fade out realistically rather than looping forever. On top of the renderer, spheres in the scene are live rigid bodies: they have position, radius, color, and elasticity, and a physics step updates their motion every frame (toggleable, with an adjustable time multiplier), so you can watch reflective spheres bounce and collide while the reflections update in real time.
 
 ## Features
 
