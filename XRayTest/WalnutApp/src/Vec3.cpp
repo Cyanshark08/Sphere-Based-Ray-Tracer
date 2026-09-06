@@ -59,6 +59,16 @@ float Vec3::magnitude() const
     return sqrt(x*x + y*y + z*z);
 }
 
+float XRay::Vec3::squareMagnitude() const
+{
+    return x * x + y * y + z * z;
+}
+
+const Vec3& XRay::Vec3::getNormal() const
+{
+    return ((*this) * (1.f / this->magnitude()));
+}
+
 Vec3 Vec3::operator+(const Vec3& other) const
 {
     return Vec3(x + other.x, y + other.y, z + other.z);

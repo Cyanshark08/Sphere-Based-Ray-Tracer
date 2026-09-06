@@ -16,6 +16,8 @@ namespace XRay
 		Vec3(const Vec3& other) : x(other.x), y(other.y), z(other.z) {} //Copy Constructor
 		//Access Useful Quantities
 		float magnitude() const;
+		float squareMagnitude() const;
+		const Vec3& getNormal() const;
 
 		//static
 		static float dot(const Vec3& p_Left, const Vec3& p_Right); //dot product

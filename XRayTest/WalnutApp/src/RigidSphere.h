@@ -28,6 +28,9 @@ namespace XRay {
         bool CheckOtherRigidBodyCollision(RigidSphere& p_OtherBody);
 
         Vec3 GetMomentum() const;
+        float GetKineticEnergy() const;
+        float GetPotentialEnergy(float p_Height) const;
+        float GetTotalEnergy(float p_FloorHeight = 0.f) const;
         void AddMomentum(Vec3 p_MomentumTransfered);
         void SetMomentum(Vec3 p_Momentum);
 
